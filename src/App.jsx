@@ -4,7 +4,7 @@ import HomeTemplate from './templates/HomeTemplate';
 
 function App() {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/anh-thu-portfolio">
 			<Routes>
 				<Route element={<HomeTemplate />}>
 					<Route

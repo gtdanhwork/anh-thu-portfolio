@@ -6,7 +6,7 @@ import {
 	toDrivePreviewUrl,
 } from '../../utils/googleDriveLinks';
 
-const image = (name) => `/images/${encodeURIComponent(name)}`;
+const image = (name) => `/anh-thu-portfolio/images/${encodeURIComponent(name)}`;
 const video = (name) => `/videos/${name}`;
 const document = (name) =>
 	toDrivePreviewUrl(DOCUMENT_LINKS[name]?.trim()) || `/documents/${name}`;
@@ -29,8 +29,16 @@ const PortfolioVideo = ({ src }) => {
 	}
 
 	return (
-		<video controls playsInline preload="metadata" className="portfolio-video">
-			<source src={video(src)} type="video/mp4" />
+		<video
+			controls
+			playsInline
+			preload="metadata"
+			className="portfolio-video"
+		>
+			<source
+				src={video(src)}
+				type="video/mp4"
+			/>
 			Trình duyệt không hỗ trợ video HTML5.
 		</video>
 	);
@@ -53,7 +61,10 @@ const BrandMark = ({ className = '' }) => (
 );
 
 export const HeroSection = () => (
-	<section className="section hero-section" id="home">
+	<section
+		className="section hero-section"
+		id="home"
+	>
 		<div className="hero-container">
 			<div className="hero-card">
 				<div className="hero-content">
@@ -66,14 +77,18 @@ export const HeroSection = () => (
 						<span className="serif-title line-2">Portfolio</span>
 					</h1>
 					<div className="hero-author-badge">
-						<span className="badge-role">MULTIMEDIA COMMUNICATION</span>
+						<span className="badge-role">
+							MULTIMEDIA COMMUNICATION
+						</span>
 						<h2 className="author-name">GIẢNG NGỌC ANH THƯ</h2>
 					</div>
 				</div>
 				<div className="hero-portrait-wrapper">
 					<div className="hero-portrait-bg" />
 					<img
-						src={image('Gemini_Generated_Image_9qu4eo9qu4eo9qu4.jpg')}
+						src={image(
+							'Gemini_Generated_Image_9qu4eo9qu4eo9qu4.jpg',
+						)}
 						alt="Giảng Ngọc Anh Thư (TanGie)"
 						className="hero-portrait-img"
 						style={{ objectPosition: 'center top' }}
@@ -85,7 +100,10 @@ export const HeroSection = () => (
 );
 
 export const AboutSection = ({ onImageClick }) => (
-	<section className="section about-section" id="about">
+	<section
+		className="section about-section"
+		id="about"
+	>
 		<div className="about-container">
 			<div className="about-grid">
 				<div className="about-col-left">
@@ -95,22 +113,25 @@ export const AboutSection = ({ onImageClick }) => (
 					</h2>
 					<div className="about-tagline-block">
 						<p className="about-quote">
-							Aside from designing, Anh Thư also finds time to enjoy nature and explore
-							creative trends where she gets fresh inspiration for future projects.
+							Aside from designing, Anh Thư also finds time to
+							enjoy nature and explore creative trends where she
+							gets fresh inspiration for future projects.
 						</p>
 					</div>
 				</div>
 				<div className="about-col-right">
 					<div className="about-bio-card">
 						<p className="bio-lead">
-							<strong>Giảng Ngọc Anh Thư</strong> is a multidisciplinary creative
-							practitioner and Multimedia Communication student at{' '}
-							<strong>Van Lang University</strong> with a passion for visual storytelling
-							and digital production.
+							<strong>Giảng Ngọc Anh Thư</strong> is a
+							multidisciplinary creative practitioner and
+							Multimedia Communication student at{' '}
+							<strong>Van Lang University</strong> with a passion
+							for visual storytelling and digital production.
 						</p>
 						<p className="bio-text">
-							She creates compelling visual experiences through graphic design, brand
-							strategy, content planning, and video production — blending analytical
+							She creates compelling visual experiences through
+							graphic design, brand strategy, content planning,
+							and video production — blending analytical
 							communication strategy with artistic sensibilities.
 						</p>
 					</div>
@@ -120,7 +141,12 @@ export const AboutSection = ({ onImageClick }) => (
 								src={image('D___9595.jpg')}
 								alt="Giảng Ngọc Anh Thư enjoying a garden"
 								className="about-img interactive-img"
-								onClick={() => onImageClick(image('D___9595.jpg'), 'Giảng Ngọc Anh Thư enjoying a garden')}
+								onClick={() =>
+									onImageClick(
+										image('D___9595.jpg'),
+										'Giảng Ngọc Anh Thư enjoying a garden',
+									)
+								}
 							/>
 						</div>
 					</div>
@@ -139,13 +165,22 @@ const contents = [
 ];
 
 export const ContentsSection = () => (
-	<section className="section toc-section" id="toc">
+	<section
+		className="section toc-section"
+		id="toc"
+	>
 		<div className="toc-container">
 			<div className="toc-grid">
 				<div className="toc-list">
 					{contents.map(([id, title], index) => (
-						<a href={`#${id}`} className="toc-item" key={id}>
-							<span className="toc-num">{String(index + 1).padStart(2, '0')}</span>
+						<a
+							href={`#${id}`}
+							className="toc-item"
+							key={id}
+						>
+							<span className="toc-num">
+								{String(index + 1).padStart(2, '0')}
+							</span>
 							<span className="toc-name">{title}</span>
 						</a>
 					))}
@@ -162,7 +197,10 @@ export const ContentsSection = () => (
 );
 
 export const EducationSection = ({ onImageClick }) => (
-	<section className="section education-section" id="education">
+	<section
+		className="section education-section"
+		id="education"
+	>
 		<div className="education-container">
 			<h2 className="section-title serif-large">Education</h2>
 			<div className="education-grid">
@@ -170,8 +208,12 @@ export const EducationSection = ({ onImageClick }) => (
 					<div className="edu-item">
 						<div className="edu-num-badge">01</div>
 						<div className="edu-details">
-							<div className="edu-school">Trường Đại học Văn Lang</div>
-							<h3 className="edu-major">Truyền thông đa phương tiện</h3>
+							<div className="edu-school">
+								Trường Đại học Văn Lang
+							</div>
+							<h3 className="edu-major">
+								Truyền thông đa phương tiện
+							</h3>
 							<span className="edu-period">2023 - hiện nay</span>
 						</div>
 					</div>
@@ -179,8 +221,12 @@ export const EducationSection = ({ onImageClick }) => (
 					<div className="edu-item">
 						<div className="edu-num-badge">02</div>
 						<div className="edu-details">
-							<div className="edu-school">Trường Đại học Văn Lang</div>
-							<h3 className="edu-major">Công Nghệ Truyền thông</h3>
+							<div className="edu-school">
+								Trường Đại học Văn Lang
+							</div>
+							<h3 className="edu-major">
+								Công Nghệ Truyền thông
+							</h3>
 							<span className="edu-period">2024 - hiện nay</span>
 						</div>
 					</div>
@@ -190,7 +236,12 @@ export const EducationSection = ({ onImageClick }) => (
 						src={image('image (4).png')}
 						alt="Van Lang University campus"
 						className="edu-campus-img interactive-img"
-						onClick={() => onImageClick(image('image (4).png'), 'Van Lang University campus')}
+						onClick={() =>
+							onImageClick(
+								image('image (4).png'),
+								'Van Lang University campus',
+							)
+						}
 					/>
 					<div className="campus-caption">
 						<span>Cơ sở 3 — Trường Đại học Văn Lang</span>
@@ -217,7 +268,9 @@ const MetricCard = () => (
 	<div className="metrics-card">
 		<div className="metrics-header">
 			<span className="project-tag">Dự án 40</span>
-			<span className="project-name">Chiến dịch truyền thông "Trợ Lý Em Ơi"</span>
+			<span className="project-name">
+				Chiến dịch truyền thông "Trợ Lý Em Ơi"
+			</span>
 		</div>
 		<div className="metrics-grid">
 			{[
@@ -226,7 +279,10 @@ const MetricCard = () => (
 				['+983.3%', 'Người theo dõi mới'],
 				['26', 'Bài đăng & 1 TVC'],
 			].map(([value, label]) => (
-				<div className="metric-box" key={label}>
+				<div
+					className="metric-box"
+					key={label}
+				>
 					<span className="metric-val">{value}</span>
 					<span className="metric-lbl">{label}</span>
 				</div>
@@ -249,14 +305,20 @@ const ExperienceHeader = ({ number, company, position, children }) => (
 );
 
 export const ExperienceSection = ({ onImageClick }) => (
-	<section className="section experience-section" id="experience">
+	<section
+		className="section experience-section"
+		id="experience"
+	>
 		<div className="experience-container">
 			<div className="experience-header">
 				<h2 className="section-title serif-large">EXPERIENCE</h2>
 				<span className="exp-badge">2026</span>
 			</div>
 
-			<article className="exp-block" id="exp-emoi">
+			<article
+				className="exp-block"
+				id="exp-emoi"
+			>
 				<ExperienceHeader
 					number="01"
 					company="Công ty dịch vụ trợ lý Em ơi"
@@ -264,27 +326,48 @@ export const ExperienceSection = ({ onImageClick }) => (
 				>
 					<div className="exp-logo-badge emoi-brand-pill">
 						<span className="emoi-logo-text">em ơi!</span>
-						<span className="emoi-logo-sub">YOUR PERSONAL ASSISTANT</span>
+						<span className="emoi-logo-sub">
+							YOUR PERSONAL ASSISTANT
+						</span>
 					</div>
 				</ExperienceHeader>
 				<div className="exp-body-grid">
 					<div className="exp-responsibilities">
-						<h4 className="block-subtitle">Key Responsibilities &amp; Leadership</h4>
+						<h4 className="block-subtitle">
+							Key Responsibilities &amp; Leadership
+						</h4>
 						<ul className="editorial-list">
-							<li>Lên campaign, pillar content, calendar content, kế hoạch sản xuất nội dung đa nền tảng.</li>
-							<li>Quản lý và đốc thúc tiến độ xuất bản nội dung, đảm bảo định hướng truyền thông thương hiệu.</li>
-							<li>Quản lý trang và theo dõi chặt chẽ các chỉ số tăng trưởng (Reach, Engagement, Followers).</li>
+							<li>
+								Lên campaign, pillar content, calendar content,
+								kế hoạch sản xuất nội dung đa nền tảng.
+							</li>
+							<li>
+								Quản lý và đốc thúc tiến độ xuất bản nội dung,
+								đảm bảo định hướng truyền thông thương hiệu.
+							</li>
+							<li>
+								Quản lý trang và theo dõi chặt chẽ các chỉ số
+								tăng trưởng (Reach, Engagement, Followers).
+							</li>
 						</ul>
 						<MetricCard />
 					</div>
 					<div className="exp-visuals-col">
 						<div className="exp-gallery">
-							<div className="gallery-item" style={{ gridColumn: '1 / -1' }}>
+							<div
+								className="gallery-item"
+								style={{ gridColumn: '1 / -1' }}
+							>
 								<img
 									src={image('image (2).png')}
 									alt="Em Ơi content campaign"
 									className="interactive-img"
-									onClick={() => onImageClick(image('image (2).png'), 'Em Ơi content campaign')}
+									onClick={() =>
+										onImageClick(
+											image('image (2).png'),
+											'Em Ơi content campaign',
+										)
+									}
 								/>
 							</div>
 						</div>
@@ -293,14 +376,23 @@ export const ExperienceSection = ({ onImageClick }) => (
 								src={image('image (3).png')}
 								alt="Em Ơi campaign visual"
 								className="interactive-img"
-								onClick={() => onImageClick(image('image (3).png'), 'Em Ơi campaign visual')}
+								onClick={() =>
+									onImageClick(
+										image('image (3).png'),
+										'Em Ơi campaign visual',
+									)
+								}
 							/>
-							<div className="img-badge">Sự kiện: Đêm Sắc Màu x Em Ơi</div>
+							<div className="img-badge">
+								Sự kiện: Đêm Sắc Màu x Em Ơi
+							</div>
 						</div>
 					</div>
 				</div>
 				<div className="exp-video-showcase">
-					<h4 className="video-showcase-title">Featured Video Production — Em Ơi Campaigns</h4>
+					<h4 className="video-showcase-title">
+						Featured Video Production — Em Ơi Campaigns
+					</h4>
 					<div className="video-cards-grid">
 						<VideoCard
 							src="emoi-company-service.mp4"
@@ -321,8 +413,15 @@ export const ExperienceSection = ({ onImageClick }) => (
 				</div>
 			</article>
 
-			<article className="exp-block" id="exp-vltv">
-				<ExperienceHeader number="02" company="Văn Lang TV" position="CTV Biên tập">
+			<article
+				className="exp-block"
+				id="exp-vltv"
+			>
+				<ExperienceHeader
+					number="02"
+					company="Văn Lang TV"
+					position="CTV Biên tập"
+				>
 					<div className="exp-logo-badge vltv-brand-pill">
 						<div className="vltv-badge-circle">
 							<span className="vltv-text">VĂN LANG</span>
@@ -332,15 +431,28 @@ export const ExperienceSection = ({ onImageClick }) => (
 				</ExperienceHeader>
 				<div className="exp-body-grid">
 					<div className="exp-responsibilities">
-						<h4 className="block-subtitle">Editorial &amp; Scriptwriting</h4>
+						<h4 className="block-subtitle">
+							Editorial &amp; Scriptwriting
+						</h4>
 						<ul className="editorial-list">
-							<li>Biên tập các số phát sóng hàng tuần về sinh viên và các hoạt động học thuật, văn hóa tại trường.</li>
-							<li>Viết kịch bản Viral Clip 20/11 và Viral Clip Tết.</li>
-							<li>Tham gia trực tiếp vào quá trình tiền kỳ, sản xuất (production) và planning.</li>
 							<li>
-								<strong>Thành tích:</strong> Thu hút hơn <strong>5.000+ lượt xem</strong> và{' '}
-								<strong>1.000+ lượt tương tác</strong> cho Viral Clip ngày Tết; duy trì lượng người xem
-								ổn định các số phát sóng từ 300 đến 1.000 lượt.
+								Biên tập các số phát sóng hàng tuần về sinh viên
+								và các hoạt động học thuật, văn hóa tại trường.
+							</li>
+							<li>
+								Viết kịch bản Viral Clip 20/11 và Viral Clip
+								Tết.
+							</li>
+							<li>
+								Tham gia trực tiếp vào quá trình tiền kỳ, sản
+								xuất (production) và planning.
+							</li>
+							<li>
+								<strong>Thành tích:</strong> Thu hút hơn{' '}
+								<strong>5.000+ lượt xem</strong> và{' '}
+								<strong>1.000+ lượt tương tác</strong> cho Viral
+								Clip ngày Tết; duy trì lượng người xem ổn định
+								các số phát sóng từ 300 đến 1.000 lượt.
 							</li>
 						</ul>
 					</div>
@@ -357,12 +469,16 @@ export const ExperienceSection = ({ onImageClick }) => (
 									)
 								}
 							/>
-							<div className="img-badge">Behind The Scenes / Campus Video</div>
+							<div className="img-badge">
+								Behind The Scenes / Campus Video
+							</div>
 						</div>
 					</div>
 				</div>
 				<div className="exp-video-showcase">
-					<h4 className="video-showcase-title">Featured Broadcast &amp; Production — Văn Lang TV</h4>
+					<h4 className="video-showcase-title">
+						Featured Broadcast &amp; Production — Văn Lang TV
+					</h4>
 					<div className="video-cards-grid single-focus">
 						<VideoCard
 							src="lop-hoc-xinh-reel.mp4"
@@ -398,7 +514,12 @@ const projects = [
 		title: 'Xây dựng Kế hoạch Truyền thông Đình thần An Khánh',
 		description:
 			'Dự án khảo sát thực địa và lập kế hoạch truyền thông bảo tồn, quảng bá giá trị di sản văn hóa tâm linh Đình thần An Khánh. Tái cấu trúc tư liệu lịch sử thành nội dung số tương tác thu hút giới trẻ.',
-		cover: ['ĐÌNH THẦN AN KHÁNH', 'Cultural Heritage Communication Plan', 'Project Report', 'heritage-accent'],
+		cover: [
+			'ĐÌNH THẦN AN KHÁNH',
+			'Cultural Heritage Communication Plan',
+			'Project Report',
+			'heritage-accent',
+		],
 		pdf: 'dinh-than-an-khanh.pdf',
 		pdfTitle: 'Kế hoạch Truyền thông Di sản Đình thần An Khánh',
 	},
@@ -410,7 +531,12 @@ const projects = [
 		title: 'ROLAPETPAL — Next to Paws',
 		description:
 			'Xây dựng kế hoạch truyền thông tích hợp cho ROLAPETPAL với định hướng “Next to Paws”, tập trung vào hành trình Awareness – Engagement – Conversion. Dự án triển khai chiến lược nội dung đa nền tảng, KOL/KOC, social media, activation và sự kiện nhằm gia tăng nhận diện, tương tác và thúc đẩy chuyển đổi.',
-		cover: ['ROLAPETPAL', 'Integrated Marketing Communication Campaign', 'Marketing Communication Plan', ''],
+		cover: [
+			'ROLAPETPAL',
+			'Integrated Marketing Communication Campaign',
+			'Marketing Communication Plan',
+			'',
+		],
 		pdf: 'BÀI CUỐI KÌ - ROLAPETPAL (2).pdf',
 		pdfTitle: 'ROLAPETPAL — Marketing Communication Plan',
 	},
@@ -422,7 +548,12 @@ const projects = [
 		title: 'Đồ án Thiết kế Đồ họa 1',
 		description:
 			'Tuyển tập các tác phẩm thiết kế đồ họa thị giác: nghiên cứu cấu trúc Typography, xử lý bố cục lưới (Grid system), đồ họa vector và các ấn phẩm in ấn sáng tạo.',
-		cover: ['GRAPHIC DESIGN I', 'Typography, Grid Systems & Editorial Layout', 'Academic Studio Project', 'graphic-accent'],
+		cover: [
+			'GRAPHIC DESIGN I',
+			'Typography, Grid Systems & Editorial Layout',
+			'Academic Studio Project',
+			'graphic-accent',
+		],
 		pdf: 'graphic-design-1.pdf',
 		pdfTitle: 'Thiết kế Đồ họa 1 — Báo cáo Đồ án',
 	},
@@ -434,7 +565,12 @@ const projects = [
 		title: 'Báo cáo Đồ án Thiết kế Truyền thông',
 		description:
 			'Tổng hợp bài thi kết thúc học phần thiết kế đa phương tiện. Thể hiện năng lực sáng tạo trong nghệ thuật thị giác số, xử lý chất liệu đồ họa và storytelling.',
-		cover: ['MULTIMEDIA DESIGN', 'Final Examination Portfolio & Visual Showcase', 'Examination Portfolio', 'exam-accent'],
+		cover: [
+			'MULTIMEDIA DESIGN',
+			'Final Examination Portfolio & Visual Showcase',
+			'Examination Portfolio',
+			'exam-accent',
+		],
 		pdf: 'multimedia-design-exam.pdf',
 		pdfTitle: 'Báo cáo Đồ án Thiết kế Truyền thông',
 	},
@@ -475,7 +611,10 @@ const projects = [
 ];
 
 const ProjectCard = ({ project, onOpenPdf, onImageClick }) => (
-	<article className="project-item" data-category={project.category}>
+	<article
+		className="project-item"
+		data-category={project.category}
+	>
 		<div className={`project-category-bar ${project.category}-bar`}>
 			<span>{project.bar}</span>
 		</div>
@@ -487,17 +626,27 @@ const ProjectCard = ({ project, onOpenPdf, onImageClick }) => (
 							src={image(project.image)}
 							alt={project.imageAlt}
 							className="project-preview-img interactive-img"
-							onClick={() => onImageClick(image(project.image), project.imageAlt)}
+							onClick={() =>
+								onImageClick(
+									image(project.image),
+									project.imageAlt,
+								)
+							}
 						/>
 					</div>
 				) : project.video ? (
-					<div className={`video-container-card${project.vertical ? ' vertical-reel' : ''}`}>
+					<div
+						className={`video-container-card${project.vertical ? ' vertical-reel' : ''}`}
+					>
 						<PortfolioVideo src={project.video} />
 					</div>
 				) : (
 					<div className={`pdf-cover-card ${project.cover[3]}`}>
 						<div className="pdf-badge-icon">
-							<i className="bi bi-file-earmark-richtext" aria-hidden="true" />
+							<i
+								className="bi bi-file-earmark-richtext"
+								aria-hidden="true"
+							/>
 						</div>
 						<h4 className="pdf-cover-title">{project.cover[0]}</h4>
 						<p className="pdf-cover-sub">{project.cover[1]}</p>
@@ -515,7 +664,10 @@ const ProjectCard = ({ project, onOpenPdf, onImageClick }) => (
 				{project.tags && (
 					<div className="project-tags-list">
 						{project.tags.map((tag) => (
-							<span className="tech-tag" key={tag}>
+							<span
+								className="tech-tag"
+								key={tag}
+							>
 								{tag}
 							</span>
 						))}
@@ -534,11 +686,21 @@ const ProjectCard = ({ project, onOpenPdf, onImageClick }) => (
 								)
 							}
 						>
-							<i className="bi bi-file-earmark-text" aria-hidden="true" />
+							<i
+								className="bi bi-file-earmark-text"
+								aria-hidden="true"
+							/>
 							VIEW PROJECT REPORT
 						</button>
-						<a href={documentDownload(project.pdf)} download className="btn btn-secondary">
-							<i className="bi bi-download" aria-hidden="true" />
+						<a
+							href={documentDownload(project.pdf)}
+							download
+							className="btn btn-secondary"
+						>
+							<i
+								className="bi bi-download"
+								aria-hidden="true"
+							/>
 							DOWNLOAD PDF
 						</a>
 					</div>
@@ -553,11 +715,17 @@ export const ProjectsSection = ({ onOpenPdf, onImageClick }) => {
 	const categories = ['design', 'video', 'marketing'];
 
 	return (
-		<section className="section projects-section" id="projects">
+		<section
+			className="section projects-section"
+			id="projects"
+		>
 			<div className="projects-container">
 				<div className="projects-header-row">
 					<h2 className="section-title serif-huge">Project</h2>
-					<div className="project-filters" aria-label="Filter projects">
+					<div
+						className="project-filters"
+						aria-label="Filter projects"
+					>
 						{categories.map((category) => (
 							<button
 								className={`filter-pill${filter === category ? ' active' : ''}`}
@@ -589,7 +757,10 @@ export const ProjectsSection = ({ onOpenPdf, onImageClick }) => {
 };
 
 export const SkillsSection = ({ onImageClick }) => (
-	<section className="section skills-section" id="skills">
+	<section
+		className="section skills-section"
+		id="skills"
+	>
 		<div className="skills-container">
 			<h2 className="section-title serif-huge">SKILL</h2>
 			<div className="skills-grid">
@@ -614,10 +785,16 @@ export const SkillsSection = ({ onImageClick }) => (
 						['Quản lý thời gian', 'minimal-item'],
 						['Tư duy phản biện', 'pastel-peach'],
 						['Brand Strategy & Content Planning', 'minimal-item'],
-						['Photoshop, Illustrator, Premiere, After Effects', 'pastel-yellow'],
+						[
+							'Photoshop, Illustrator, Premiere, After Effects',
+							'pastel-yellow',
+						],
 						['Animation 2D, 3D & Motion Graphics', 'minimal-item'],
 					].map(([skill, style]) => (
-						<div className={`skill-item ${style}`} key={skill}>
+						<div
+							className={`skill-item ${style}`}
+							key={skill}
+						>
 							<span className="skill-text">{skill}</span>
 						</div>
 					))}
@@ -628,7 +805,10 @@ export const SkillsSection = ({ onImageClick }) => (
 );
 
 export const ContactSection = () => (
-	<section className="section contact-section" id="contact">
+	<section
+		className="section contact-section"
+		id="contact"
+	>
 		<div className="contact-banner-strip">
 			<div className="contact-strip-inner">
 				<div className="strip-brand">
@@ -646,21 +826,37 @@ export const ContactSection = () => (
 						<span>get started.</span>
 					</h2>
 					<p className="contact-subtext">
-						Sẵn sàng hợp tác cho các dự án Thiết kế Thương hiệu, Sáng tạo Nội dung và Sản xuất Video.
+						Sẵn sàng hợp tác cho các dự án Thiết kế Thương hiệu,
+						Sáng tạo Nội dung và Sản xuất Video.
 					</p>
 				</div>
 				<div className="contact-right">
 					<div className="contact-details">
-						<a href="mailto:anhthu.creative@gmail.com" className="contact-detail-link">
-							<i className="bi bi-envelope" aria-hidden="true" />
+						<a
+							href="mailto:anhthu.creative@gmail.com"
+							className="contact-detail-link"
+						>
+							<i
+								className="bi bi-envelope"
+								aria-hidden="true"
+							/>
 							<span>anhthu.creative@gmail.com</span>
 						</a>
-						<a href="tel:+84900000000" className="contact-detail-link">
-							<i className="bi bi-telephone" aria-hidden="true" />
+						<a
+							href="tel:+84900000000"
+							className="contact-detail-link"
+						>
+							<i
+								className="bi bi-telephone"
+								aria-hidden="true"
+							/>
 							<span>(09x) xxx-xxxx</span>
 						</a>
 						<div className="contact-detail-item">
-							<i className="bi bi-geo-alt" aria-hidden="true" />
+							<i
+								className="bi bi-geo-alt"
+								aria-hidden="true"
+							/>
 							<span>Ho Chi Minh City, Vietnam</span>
 						</div>
 					</div>
@@ -678,7 +874,10 @@ export const ContactSection = () => (
 								aria-label={label}
 								key={icon}
 							>
-								<i className={`bi bi-${icon}`} aria-hidden="true" />
+								<i
+									className={`bi bi-${icon}`}
+									aria-hidden="true"
+								/>
 							</a>
 						))}
 					</div>
@@ -687,4 +886,3 @@ export const ContactSection = () => (
 		</div>
 	</section>
 );
-

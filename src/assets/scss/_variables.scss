@@ -1,0 +1,25 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Colors & Gradients
+
+// Typography & Spacing
+
+// Global responsive utility mixins
+@mixin mobile-only {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: 991.98px) {
+    @content;
+  }
+}
